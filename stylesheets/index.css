@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .right_header a:hover {
+    color: rgb(71, 167, 212);
+  }
+
+  header {
+    height: 100px;
+  }
+
+
+  .container_header {
+    z-index: 999;
+    position: fixed;
+    transition: 1.5s;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .container_header.hide{
+    transform: translateY(-100%);
+}
+
+  .img_icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 2%;
+    margin-left: 3%;
+  }
+  .left_header {
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+    color: black;
+  }
+  .left_header > a {
+    color: black;
+    padding: 0 10px;
+  }
+
+
+  .left_header, .right_header {
+    display: flex;
+    align-items: center;
+  }
+  .right_header {
+    margin-left: auto; /*右寄せ*/
+    margin-right: 15px;
+  }
+  .right_header > a {
+    margin-left: auto;
+    padding: 0 40px;
+  }
+  
+  .first-block {
+    position   : relative;
+    height     : 600px;
+    margin     : 0 50px;
+    overflow   : hidden;
+  }
+  
+  /* --- 背景の指定 ------------------------------------------- */
+  .first-block .bgImg {
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation  : bgAnime 28s infinite;   /* 4画像 × 各5s = 20s */
+  }
+  
+  /* --- 段差で背景画像のアニメーションを実行 ----------------- */
+  .first-block .src1 {
+    background-image : url(../images/2.jpg); 
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  
+
+  }
+  .first-block .src2 {
+    background-image : url(../images/1.jpg);   /* 背景の画像を指定 */
+    animation-delay  : 7s;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  }
+  .first-block .src3 {
+    background-image : url(../images/4.jpg);   /* 背景の画像を指定 */
+    animation-delay  : 14s;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  }
+  .first-block .src4 {
+    background-image : url(../images/6.png);   /* 背景の画像を指定 */
+    animation-delay  : 21s;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+  }
+  
+  @keyframes bgAnime {
+     0% { opacity: 0; }
+     5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+   100% { opacity: 0; }
+  }
+  
+  /* --- 前面の文字定義（サンプルのため変更してください） ----- */
+  .first-block .boxString{
+    position   : absolute;
+    display    : inline-block;
+    padding    : 20px;
+    top        : 15%;                               /* 中央寄せ */
+    left       : 50%;
+    transform  : translate(-50%,-50%);
+    z-index    : 11;
+    font-family: serif;
+    color: rgb(95, 91, 91);
+    font-size: 50px;
+  }
+
+  .title-container {
+    text-align: center;
+  }
+
+  /*   First block End   */
+  
+  
+  /*   Second block   */
+  #second-block {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
+  }
+  
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    width: 100%;
+  }
+  
+  .events-title {
+    font-size: 60px;
+    font-family: serif;
+    color: #444;
+  }
+  
+  .event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    margin-top: 0px;
+
+    width: 100%;
+  }
+  
+  .event-name {
+    font-size: 17px;
+    padding: 10px;
+    width: 40%;
+    margin-left: 30px;
+    margin-top: 140px;
+    text-align: left;
+  }
+  
+  span {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: serif;
+  }
+  .title2{
+    margin-top: 170px;
+    margin-left: 30px;
+    text-align: left;
+  }
+  .cont3{
+    margin-top: 180px;
+    margin-right: 70px;
+    text-align: left;
+  }
+
+  .event-image {
+    margin: 50px;
+    width: 50%;
+    height: 400px;
+  }
+
+  /* ボタン */
+  .animation {
+    width:150px;
+    height:70px;
+    text-align:center;
+    border:2px solid #BBBBBB;
+    float:left;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin-left: 130px;
+    margin-top: 30px;
+  }
+  .animation a {
+    font-family:arial;
+    font-size:20px;
+    color:#BBBBBB;
+    text-decoration:none;
+    line-height:70px;
+    transition:all .10s ease;
+    z-index:2;
+    position:relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+  .effect {
+    width:150px;
+    height:70px;
+    top:-2px;
+    left:-150px;
+    background:#BBBBBB;
+    position:absolute;
+    transition:all .5s ease;
+    z-index:1;
+  }
+  .animation:hover .effect {
+    left:0;
+  }
+  .animation:hover a {
+    color:#FFFFFF;
+  }
+  
+  /*   Second block End   */
+    
+
+    
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 50px;
+    background-color: rgb(192, 203, 218);
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+  }
